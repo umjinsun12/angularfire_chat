@@ -1,0 +1,24 @@
+<ion-view view-title="Chats">
+  <ion-content>
+
+  <div class="list">
+    <a class="item item-avatar" ng-repeat="chat in chats">
+      <img ng-src="{{chat.img}}">
+      <h2>{{chat.user}}</h2>
+      <p>{{chat.message}}</p>
+    </a>
+  </div>
+
+
+    <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="Message" ng-model="chat.message">
+        </label>
+        <button class="button button-small" ng-click="Sendmsg(chat)">
+          Submit
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
